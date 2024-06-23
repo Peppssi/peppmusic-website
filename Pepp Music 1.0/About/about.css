@@ -1,0 +1,142 @@
+@import url("../custom/header.css");
+@import url("../custom/footer.css");
+@import url("../custom/variables.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text-light);
+}
+
+body,
+html {
+  background-color: var(--dark);
+  overflow-x: hidden;
+}
+
+.container {
+  margin-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+/* Text section */
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.text-container hr {
+  border: none;
+  width: 80%;
+  height: 1px;
+  background-color: var(--sand);
+  margin-bottom: 20px;
+}
+
+.text-container h2 {
+  color: inherit;
+  font-weight: var(--heavy-weight);
+  font-size: var(--font-x-large);
+  margin-bottom: calc(var(--font-x-large) * 2);
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.text-container p {
+  color: inherit;
+  font-weight: var(--normal-weight);
+  font-size: var(--font-regular);
+  line-height: var(--font-large);
+  margin-bottom: calc(var(--font-regular) * 2);
+  width: 100%;
+}
+
+/* Image section */
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 90vw;
+  width: 500px;
+  display: block;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.link-button {
+  font-family: inherit;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  z-index: 1;
+  font-size: var(--font-large);
+  padding: 20px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-light);
+  border: solid var(--sand) 2px;
+}
+
+.link-button:hover {
+  color: var(--sand);
+  border-color: var(--light);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness*/
+@media (max-width: 1024px) {
+  .text-container h2 {
+    margin-bottom: 60px;
+  }
+  .text-container {
+    width: 95%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .section-container{
+    display: flex;
+    flex-direction: column;
+  }
+  #second-image-container{
+    order: 2;
+  }
+  #second-text-container{
+    order: 1;
+  }
+  .link-button{
+    font-size: var(--font-regular);
+  }
+}
+
+@media (max-width: 420px) {
+  .text-container h2 {
+    font-size: var(--font-large);
+  }
+}

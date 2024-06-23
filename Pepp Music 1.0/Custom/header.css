@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+
+.header-nav {
+  position: fixed;
+  z-index: 2;
+  background: var(--dark);
+  height: var(--header-height);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header-logo {
+  color: var(--text-light);
+  font-size: var(--font-large);
+  line-height: 80px;
+  margin-left: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Logo section */
+.header-logo:hover {
+  transition: 0.3s;
+  color: var(--medium);
+}
+
+/* Links section */
+#contact {
+  color: var(--sand);
+  border-radius: 3px;
+  padding: 18px;
+  border: 2px solid var(--sand);
+  transition: 0.3s;
+}
+
+#contact:hover {
+  transition: 0.3s;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.header-ul {
+  z-index: inherit;
+  float: right;
+  margin-right: 20px;
+}
+
+.header-li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.header-a {
+  color: white;
+  font-size: var(--font-regular);
+  font-weight: var(--heavy-weight);
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.header-a:hover {
+  color: var(--medium);
+  transition: 0.3s;
+}
+
+.checkbtn {
+  font-size: var(--font-large);
+  color: var(--text-light);
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  display: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkbtn:hover{
+  transition: 0.3s;
+  color: var(--medium);
+}
+
+#check {
+  display: none;
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 858px) {
+  .header-logo{
+    font-size: var(--font-regular);
+  }
+  .checkbtn {
+    display: block;
+  }
+  .header-ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark);
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .header-li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .header-a {
+    font-size: 20px;
+  }
+  .header-a:hover {
+    background: none;
+    color: var(--medium);
+  }
+  #check:checked ~ .header-ul {
+    left: 0;
+  }
+}

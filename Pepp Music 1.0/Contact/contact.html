@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://kit.fontawesome.com/ef95b60317.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="contact.css" />
+    <script defer src="../Custom/customComponents.js"></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <my-header></my-header>
+    <div class="container">
+      <div class="contact-container">
+        <!-- DJ Form -->
+        <form id="dj-form" class="contact-form active" action="https://api.web3forms.com/submit" method="POST">
+          <div class="contact-left-title">
+            <h2>KONTAKT</h2>
+            <hr/>
+          </div>
+          <input type="hidden" name="access_key" value="8d7fa59c-e2ec-41b0-be4a-c90ae6347c8d">
+          <input type="text" name="name" placeholder="namn" class="contact-inputs" required>
+          <input type="text" name="date" placeholder="datum för event" class="contact-inputs" required>
+          <input type="text" name="address" placeholder="adress" class="contact-inputs" required>
+          <input type="email" name="email" placeholder="email" class="contact-inputs" required>
+          <textarea name="message" placeholder="kort beskrivning av eventet" id="message" class="contact-inputs" required></textarea>
+          <button id="submit-button" type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+    <my-footer></my-footer>
+  </body>
+</html>

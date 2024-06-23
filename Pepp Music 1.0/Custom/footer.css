@@ -1,0 +1,29 @@
+.footer-container {
+  background: var(--dark);
+  height: var(--footer-height);
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-container p {
+  color: var(--text-light);
+  font-size: var(--font-small);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.footer-contact-container p {
+  font-size: var(--font-regular);
+}
